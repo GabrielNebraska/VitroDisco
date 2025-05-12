@@ -3,7 +3,7 @@ from core.models import Produto
 from core.serializers.produto import ProdutoSerializer
 
 class ProdutoViewSet(ModelViewSet):
-    queryset = Usuario.objects.all()
-    serializer_class = UsuarioSerializer
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
 
     
