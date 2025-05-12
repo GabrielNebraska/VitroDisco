@@ -8,11 +8,15 @@ from drf_spectacular.views import (
 from rest_framework.routers import DefaultRouter
 
 from core.views import UserViewSet
+from core.views.usuario import UsuarioViewSet
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
-
+router.register(r'usuario', UsuarioViewSet, basename='usuarios')
+router.register(r'produto', UserViewSet, basename='produtos')
+router.register(r'artista', UserViewSet, basename='artistas')
+router.register(r'endereco', UserViewSet, basename='enderecos')
 urlpatterns = [
     path('admin/', admin.site.urls),
     # OpenAPI 3
